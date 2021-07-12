@@ -1,4 +1,5 @@
-/*
+<?php
+/**
  * CoreShop.
  *
  * This source file is subject to the GNU General Public License version 3 (GPLv3)
@@ -7,15 +8,20 @@
  *
  * @copyright  Copyright (c) 2015-2020 Dominik Pfaffenbauer (https://www.pfaffenbauer.at)
  * @license    https://www.coreshop.org/license     GNU General Public License version 3 (GPLv3)
- *
  */
 
-pimcore.registerNS('coreshop.provider.gateways');
-pimcore.registerNS('coreshop.provider.gateways.abstract');
-coreshop.provider.gateways.abstract = Class.create({
+declare(strict_types=1);
 
-    getLayout: function () {
-        return [];
-    }
+namespace CoreShop\Bundle\PaymentBundle\CoreExtension;
 
-});
+use CoreShop\Bundle\ResourceBundle\CoreExtension\Multiselect;
+
+class PaymentProviderMultiselect extends Multiselect
+{
+    /**
+     * Static type of this element.
+     *
+     * @var string
+     */
+    public $fieldtype = 'coreShopPaymentProviderMultiselect';
+}

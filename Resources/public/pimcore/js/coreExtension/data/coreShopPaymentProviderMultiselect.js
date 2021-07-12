@@ -10,20 +10,20 @@
  *
  */
 
-pimcore.registerNS('pimcore.object.classes.data.coreShopPaymentProvider');
-pimcore.object.classes.data.coreShopPaymentProvider = Class.create(coreshop.object.classes.data.select, {
+pimcore.registerNS('pimcore.object.classes.data.coreShopPaymentProviderMultiselect');
+pimcore.object.classes.data.coreShopPaymentProviderMultiselect = Class.create(coreshop.object.classes.data.dataMultiselect, {
 
-    type: 'coreShopPaymentProvider',
+    type: 'coreShopPaymentProviderMultiselect',
 
     getTypeName: function () {
-        return t('coreshop_payment_provider');
-    },
-
-    getGroup: function () {
-        return 'coreshop';
+        return t('coreshop_payment_provider_multiselect');
     },
 
     getIconClass: function () {
         return 'coreshop_icon_payment_provider';
+    },
+
+    getGroup: function () {
+        return 'coreshop';
     }
 });

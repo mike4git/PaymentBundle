@@ -10,12 +10,10 @@
  *
  */
 
-pimcore.registerNS('coreshop.provider.gateways');
-pimcore.registerNS('coreshop.provider.gateways.abstract');
-coreshop.provider.gateways.abstract = Class.create({
+pimcore.registerNS('pimcore.object.tags.coreShopPaymentProviderMultiselect');
+pimcore.object.tags.coreShopPaymentProviderMultiselect = Class.create(coreshop.object.tags.multiselect, {
 
-    getLayout: function () {
-        return [];
-    }
-
+    type: 'coreShopPaymentProviderMultiselect',
+    storeName: 'coreshop_payment_provider',
+    displayField: 'identifier'
 });
